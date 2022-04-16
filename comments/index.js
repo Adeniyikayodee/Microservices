@@ -59,7 +59,7 @@ app.post('/posts/:id/comments', async (req, res) => {
           status,
           postId, 
           content
-        };
+        }
       });
     };
 
