@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: cygnetops/client-95
+    - image: kayode/client-95
       context: client
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: "src/**/*.js"
             dest: .
-    - image: cygnetops/comments-84
+    - image: kayode/comments-84
       context: comments
       docker:
         dockerfile: Dockerfile
@@ -32,7 +32,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: cygnetops/moderation-84
+    - image: kayode/moderation-84
       context: moderation
       docker:
         dockerfile: Dockerfile
@@ -40,7 +40,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: cygnetops/posts-95
+    - image: kayode/posts-95
       context: posts
       docker:
         dockerfile: Dockerfile
@@ -48,7 +48,7 @@ build:
         manual:
           - src: "*.js"
             dest: .
-    - image: cygnetops/query-84
+    - image: kayode/query-84
       context: query
       docker:
         dockerfile: Dockerfile
