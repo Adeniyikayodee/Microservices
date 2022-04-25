@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: event-bus-depl
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: event-bus
@@ -14,18 +14,17 @@ spec:
     spec:
       containers:
         - name: event-bus
-          image: kayode/event-bus
+          image: kayode/event-bus-82
 ---
-apiVersion: apps/v1
+apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: event-bus-srv
 spec:
-  selector: 
+  selector:
     app: event-bus
   ports:
     - name: event-bus
       protocol: TCP
       port: 4005
       targetPort: 4005
-      
